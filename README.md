@@ -21,7 +21,13 @@ The Power Point presentation is provided as a walkthrough, with images, to compl
 5. Submit link to your forked version of the repository on Canvas.
 
 # Assignment
-Create a simple calculator capable of parsing out 
+Create a simple calculator capable of parsing out numbers, operation
+Deliverables:
+* Fork Assignment to own profile
+* work on assignment, creating commits and pushing code to forked repository.
+** Important Note: Success in the code is not the point of this assignment. Being able to Fork, update, and turn in is.
+** The forked repository should be updated at least once, minimum of 10 lines edited.
+* Turn in link to forked repository
 
 GUI Setup
 * Add a TextBox to display output, mark it as editable false. (Already Added)
@@ -33,4 +39,13 @@ Form.cs
 * Add code to buttons
 * Add Form Load.
 
-((STILL UNDER EDITING))
+Object Naming Convention
+* Buttons | btn... | btnEquals, btnZero, btnOne, ..., btnNine, btnSubtract, btnMultiply, btnDivide, btnAdd
+* TextBox | txt... | txtDisplay
+
+Objectives of code:
+* Input two numbers separated by an operation
+* Parse input to determine equation
+* Calculate correct answers for ab, a+b, a-b, a/b
+
+Approximately 30 minutes will be given for this assignment, with instructor aid, helping each other is permitted. Example code can be found below and in the Power Point presentation: Lesson 03 Forking Assignment.
