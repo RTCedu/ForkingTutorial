@@ -52,7 +52,8 @@ Objectives of code:
 
 Approximately 30 minutes will be given for this assignment, with instructor aid, helping each other is permitted. Example code can be found below and in the Power Point presentation: Lesson 03 Forking Assignment.
 
-#Examples and Used Code
+# Examples and Used Code
+
 Global variables utilized in code:
        * StringBuilder equation = new StringBuilder(); // used to compile input into one parsable string
        * double answer; // holds the equation's solution upon calculation
