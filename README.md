@@ -21,6 +21,8 @@ The Power Point presentation is provided as a walkthrough, with images, to compl
 5. Submit link to your forked version of the repository on Canvas.
 
 # Assignment
+Full notation on these examples are presented in solution.
+
 Create a simple calculator capable of parsing out numbers, operation
 Deliverables:
 * Fork Assignment to own profile
@@ -49,3 +51,48 @@ Objectives of code:
 * Calculate correct answers for ab, a+b, a-b, a/b
 
 Approximately 30 minutes will be given for this assignment, with instructor aid, helping each other is permitted. Example code can be found below and in the Power Point presentation: Lesson 03 Forking Assignment.
+
+#Examples and Used Code
+Global variables utilized in code:
+       * StringBuilder equation = new StringBuilder(); // used to compile input into one parsable string
+       * double answer; // holds the equation's solution upon calculation
+       * bool ANSWER_DISPLAYED; // True/False check for answer being displayed
+       * char OPERATOR; // +-*/ as input by user for equation
+
+Example code for button to add input from user to equation.
+      private void btnZero_Click(object sender, EventArgs e)
+      {
+          AnswerCheck();
+          equation.Append("0");
+          UpdateEquationDisplay(equation.ToString());
+      }
+     
+Example method to parse string input into two variables, conduct appropriate calculation, and return of answer as a double.
+        public double ParseCalcEquation(string e)
+        {
+            int a = -1, b = -1;
+            string[] parts = e.Split('/', '-', '+', '*');
+            bool checkA = false;
+            bool checkB = false;
+            if (parts.Count() == 2)
+            {
+                if (!checkA) checkA = int.TryParse(parts[0], out a);
+                else return -1;
+                if (!checkB) checkB = int.TryParse(parts[1], out b);
+                else return -1;
+                switch (OPERATOR)
+                {
+                    case '+':
+                        return a + b;
+                    case '-':
+                        return a - b;
+                    case '*':
+                        return a * b;
+                    case '/':
+                        return a / b;
+                    default:
+                        return -1;
+                }
+            }
+            else return -1;
+        }
