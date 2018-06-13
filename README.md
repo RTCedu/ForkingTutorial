@@ -1,7 +1,4 @@
 # Lesson 03 - Forking Tutorial and Assignment
-
-((CURRENTLY PROOF OF CONCEPT PROJECT))
-
 Renton Technical College - Computer Science Department
 
 Included in this repository
